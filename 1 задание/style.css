@@ -48,8 +48,58 @@ table{
     border-radius: 10px;
 }
 table, th, td{
-        padding: 5px;
-        border-style: solid;
+    padding: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+/* so far this is just a test grid */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'menu main right'
+    'menu footer footer';
+    gap: 10px;
+    background-color: black;
+}
+.grid-container > div {
+    background-color: rgba(173, 121, 121, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;}
+
+@media screen and (max-width: 430px) {
+    p{
+        font-size: 20px;
+    }
+    .li_skills{
+        font-size: 20px;
+    }
+    th, td {
+        font-size: 20px;
+    }
+    .about_me{
+        text-align: justify;
+    }
+    li{
+        width: auto;
+        padding: 15px 10px;
+        display: inline-block;
+    }
+    iframe{
+        height: 60%;
+        border-radius: 10px;
         border-color: black;
-        border-width: 2px;
+    }
+    a:hover {
+        color: white;
+        transition: none;
+    }
 }
